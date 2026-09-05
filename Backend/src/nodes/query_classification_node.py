@@ -4,7 +4,7 @@ from src.models.llm import llm
 def query_classification_node(state:application_state)->dict:
     "Analyzes the user query and determines the appropriate query category."
     
-    query=state["conversastion"][-1].content.strip()
+    query=state["conversation"][-1].content.strip()
     
     prompt=f"""
     You are a query classification assistant for a college chatbot.

@@ -4,7 +4,7 @@ from src.retrievers.fee_retriever import fee_retriever
 def fee_node(state:application_state)->dict:
      """Handles fee-related queries and generates an appropriate response."""
      
-     query=state['conversastion'][-1].content
+     query=state['conversation'][-1].content
      
      retrieved_context=fee_retriever.invoke(query)
      

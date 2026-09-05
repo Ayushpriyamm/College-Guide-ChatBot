@@ -5,7 +5,7 @@ def response_generator_node(state:application_state)->dict:
     """Generates a clear and accurate response to the user's query using retrieved context when available."""
 
     course=state['course']
-    query=state['conversastion'][-1].content.strip()
+    query=state['conversation'][-1].content.strip()
     
     
     retrieved_context=state['retrived_context']
@@ -47,6 +47,6 @@ def response_generator_node(state:application_state)->dict:
     response=llm.invoke(prompt)
     
     
-    return {'conversastion':[('ai',response.content.strip())]}
+    return {'conversation':[('ai',response.content.strip())]}
         
         
